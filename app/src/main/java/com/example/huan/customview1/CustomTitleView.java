@@ -169,7 +169,7 @@ public class CustomTitleView extends View {
         canvas.drawRect(0, 0, getMeasuredWidth(), getMeasuredHeight(), mPaint);
 
         mPaint.setColor(mTitleTextColor);
-        /**x默认是这个字符串的左边在屏幕的位置，如果设置了paint.setTextAlign(Paint.Align.CENTER);那就是字符的中心，y是指定这个字符baseline在屏幕上的位置**/
+        /**x默认是这个字符串的左边在屏幕的位置，如果设置了paint.setTextAlign(Paint.Align.CENTER),那就是字符的中心;y是指定这个字符baseline在屏幕上的位置**/
         canvas.drawText(mTitleText, getWidth() / 2 - mBound.width() / 2, getHeight() / 2 + mBound.height() / 2, mPaint);
     }
 
