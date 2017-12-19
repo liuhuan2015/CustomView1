@@ -17,6 +17,23 @@ import java.util.Set;
 
 /**
  * Created by huan on 2017/12/18.
+ *
+ *
+ *
+ * 在attrs中,attr不依赖于declare-styleable,declare-styleable只是为了方便attr的使用
+ * 我们自己定义的属性完全可以不放到styleable里面，比如直接在resources文件中定义一些属性.
+ *
+ *  <attr name="custom_attr1" format="string" />
+ *  <attr name="custom_attr2" format="string" />
+ *
+ *  定义一个declare-styleable，在获取属性的时候为我们自动提供了一个属性数组。
+ *  此外，我觉得使用declare-styleable的方式有利于我们我们把相关的属性组织起来，有一个分组的概念，属性的使用范围更加明确.
+ *
+ *  使用obtainStyledAttributes来获取属性
+ *
+ *  TypedArray主要有两个作用，第一是内部去转换attrid和属性值数组的关系；第二是提供了一些类型的自动转化，
+ *  比如我们getString时，如果你是通过@string/hello这种方式设置的，TypedArray会自动去将ResId对应的string从资源文件中读出来。
+ *  说到底，都是为了方便我们获取属性参数
  */
 
 public class CustomTitleView extends View {
